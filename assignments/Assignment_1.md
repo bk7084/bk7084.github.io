@@ -35,21 +35,25 @@ There are three subtasks, all to be completed in
 
 In lecture 1 we saw the following equation:
 
-\[\mathbf{r} + t\mathbf{d} = \mathbf{a} + \beta(\mathbf{b} - \mathbf{a}) + \gamma(\mathbf{c}-\mathbf{a}),
-\label{eq:raytriintersection}\] where the left side defines a point on a
+\[
+  \mathbf{r} + t\mathbf{d} = \mathbf{a} + \beta(\mathbf{b} - \mathbf{a}) + \gamma(\mathbf{c}-\mathbf{a}),
+\label{eq:raytriintersection}
+\]
+
+where the left side defines a point on a
 ray and the right side a point on the plane of a triangle. More
 specifically:
 
-  - The ray is defined by its origin \(\mathbf{r}\) and a direction
-    \(\mathbf{d}\). The parameter \(t\) defines any point along the ray
+  - The ray is defined by its origin $\mathbf{r}$ and a direction
+    $\mathbf{d}$. The parameter $t$ defines any point along the ray
     by scaling the direction vector.
 
-  - The triangle is defined by three vertices \(\mathbf{a}\),
-    \(\mathbf{b}\), and \(\mathbf{c}\) and the parameter \(\beta\) and
-    \(\gamma\) combines the three vertices to define a point on the
+  - The triangle is defined by three vertices $\mathbf{a}$,
+    $\mathbf{b}$, and $\mathbf{c}$ and the parameter $\beta$ and
+    $\gamma$ combines the three vertices to define a point on the
     triangle’s plane.
 
-  - When the following conditions for \(\beta\) and \(\gamma\) are
+  - When the following conditions for $\beta$ and $\gamma$ are
     satisfied, the point is inside the triangle: \[\begin{aligned}
     \beta \geq 0, \\
     \gamma \geq 0, \\
@@ -67,11 +71,11 @@ r_y + td_y &= a_y + \beta(b_y - a_y) + \gamma(c_y-a_y), \\
 r_z + td_z &= a_z + \beta(b_z - a_z) + \gamma(c_z-a_z).\end{aligned}
 \]
 
-The linear system above contains three unknowns: \(\beta\), \(\gamma\)
-and \(t\). We have a ray and a triangle, and we want to find a point
-defined on the plane by the parameters \(\beta\), \(\gamma\) and the
-same point defined by the parameter \(t\) from the ray. In other words,
-we want to find \(\beta\), \(\gamma\) and \(t\) that will make the left
+The linear system above contains three unknowns: $\beta$, $\gamma$
+and $t$. We have a ray and a triangle, and we want to find a point
+defined on the plane by the parameters $\beta$, $\gamma$ and the
+same point defined by the parameter $t$ from the ray. In other words,
+we want to find $\beta$, $\gamma$ and $t$ that will make the left
 side of the equations equal the right side. When this happens, we have
 found a point that is on the ray and at the same time on the plane of
 the triangle.
@@ -102,10 +106,10 @@ through problems. Try to go from the matrix notation back to the three
 equations.
 
 We often write the combination of matrices and vectors as
-\(\mathbf{Ax} = \mathbf{b}\). This is called a linear system. Here, we
-know the elements of \(\mathbf{A}\) and \(\mathbf{b}\), and we want to
-find the solution vector \(\mathbf{x}\). For our specific ray-triangle
-intersection \(\mathbf{x} = [\beta, \gamma, t]^\intercal\). One way to
+$\mathbf{Ax} = \mathbf{b}$. This is called a linear system. Here, we
+know the elements of $\mathbf{A}$ and $\mathbf{b}$, and we want to
+find the solution vector $\mathbf{x}$. For our specific ray-triangle
+intersection $\mathbf{x} = [\beta, \gamma, t]^\intercal$. One way to
 solve this system is by sweeping the matrix (Gaussian elimination). We
 will take a shortcut to find a solution by using NumPy’s solver for
 linear system. It’s used as follows: `x = np.linalg.solve(A, b)`.
