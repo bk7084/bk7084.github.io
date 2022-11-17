@@ -1,3 +1,8 @@
+---
+layout: default
+title: BK7084 - Assignment 2
+---
+
 # Introduction
 
 In this assignment, we will dive deeper into transformations. It’s

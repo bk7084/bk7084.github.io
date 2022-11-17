@@ -1,3 +1,8 @@
+---
+layout: default
+title: BK7084 - Assignment 1
+---
+
 # Description
 
 Your first assignment is to write a program for a ray-triangle
@@ -6,7 +11,7 @@ algorithms, especially ray-tracing. You can think of the ray as being a
 ray of light and the triangle is part of some surface. You want to know
 whether the light ray intersects with the surface (i.e. the triangle).
 
-![Starting Situation](images/assignment1/window.png)
+![Starting Situation](../assets/images/assignment1/window.png)
 
 Most of the framework is already implemented for you. When you first run
 the exercise you should see a blue triangle with a moving ray (in

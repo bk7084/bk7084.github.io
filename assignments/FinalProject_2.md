@@ -1,3 +1,8 @@
+---
+layout: default
+title: BK7084 - Final Assignment pt. 2
+---
+
 # City optimization
 
 In the second part of the final project, you are going to implement an

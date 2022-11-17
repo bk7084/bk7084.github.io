@@ -1,10 +1,15 @@
+---
+layout: default
+title: BK7084 - Assignment 3
+---
+
 When you first run the program, you will see the outline of the head of
 the famous statue of David by Michelangelo, as shown in
 Figure [1](#fig:initState). Even though there is a light in the scene,
 the object currently does not reflect this light in any way. It is up to
 you to specify how David’s head should interact with the incoming light.
 
-![Starting Situation](images/assignment3/initState.png)
+![Starting Situation](../assets/images/assignment3/initState.png)
 
 Your task in this assignment is to implement various shading functions.
 These functions are contained in the file `  ShaderFrag.glsl `. This
@@ -45,7 +50,7 @@ In computer graphics simulating this kind of lighting is one of the
 hardest things to get right, but simultaneously one of the most
 important factors on a scene’s photo realism.  
 
-![Direct vs. Direct+Indirect Lighting](images/assignment3/Indirect)
+![Direct vs. Direct+Indirect Lighting](../assets/images/assignment3/Indirect)
 
 Since it is so hard to approximate, old graphics applications used to
 make it easy for themselves and just assume all objects are hit by some
@@ -84,7 +89,7 @@ surface, the light intensity reaching your eye from the surface is
 proportional to the cosine of the angle between the surface normal
 vector and the direction vector from the surface to the light.
 
-![Lambert’s Cosine Law](images/assignment3/LambertLaw)
+![Lambert’s Cosine Law](../assets/images/assignment3/LambertLaw)
 
 As you can see in the above image, the light is most intensely reflected
 when the light direction matches up closely with the surface normal. The
@@ -158,7 +163,7 @@ diffuse and specular reflection. In the photo below, you see such a
 situation. Usually the the object looks fairly diffuse, but has a bright
 spot where the intense light is reflected specularly.  
 
-![Diffuse and Specular Reflection](images/assignment3/Reflection)
+![Diffuse and Specular Reflection](../assets/images/assignment3/Reflection)
 
 In computer graphics, this phenomenon has many possible approximations.
 The first one, of interest to you, was proposed by Bui Tuong Phong, and
@@ -169,7 +174,7 @@ these specular highlights will be, the duller the surface, the more
 gradually these highlights fade away.
 
 ![Phong reflection at different levels of surface
-shininess](images/assignment3/Phong)
+shininess](../assets/images/assignment3/Phong)
 
 The formula for Phong reflection is mostly empirical, but there is logic
 to it. In order to get an intense reflection of light it tries to
@@ -229,7 +234,7 @@ intensity `lightSpecular` and a variable containing the surface color
 Please note that you also need to check whether the pixel is visible or
 not. If it is invisible, then you need to set the value to be zero.  
 
-![Expected final Situation](images/assignment3/finalState.png)
+![Expected final Situation](../assets/images/assignment3/finalState.png)
 
   
 If all 3 parts of the shader are implemented properly, your result will

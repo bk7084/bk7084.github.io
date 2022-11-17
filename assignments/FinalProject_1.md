@@ -1,3 +1,8 @@
+---
+layout: default
+title: BK7084 - Final Assignment pt. 1
+---
+
 # Procedural Building Generation
 
 In your final project your task will be to procedurally generate a city
@@ -47,7 +52,7 @@ variation in your building. We have already imported the *randint()* and
 *rand()* functions from NumPy for you. Try to be as creative as
 possible, as this will count towards your final project grade\!
 
-![A simple example](images/finalproject/initial_buildings.png)
+![A simple example](../assets/images/finalproject/initial_buildings.png)
 
 # Texturing
 
@@ -69,4 +74,4 @@ texture coordinate of (0, 0) corresponds to the bottom-left of your
 texture, and a coordinate of (1, 1) corresponds to the top-right of your
 texture.
 
-![UV-Coordinates](images/finalproject/UV2.png)
+![UV-Coordinates](../assets/images/finalproject/UV2.png)

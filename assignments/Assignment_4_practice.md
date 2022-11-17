@@ -1,3 +1,8 @@
+---
+layout: default
+title: BK7084 - Assignment 4
+---
+
 # Solving linear systems
 
 Solve the following linear systems with 3 variables:  
@@ -91,7 +96,7 @@ Apply it to such a point to check your answer.
 
 ### 2\.
 
-![Test Subject](images/assignment4/Smiley)
+![Test Subject](../assets/images/assignment4/Smiley)
 
 What type of transformation is the following matrix responsible for?
 Sketch what it would do to our test subject.  

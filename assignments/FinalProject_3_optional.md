@@ -1,3 +1,8 @@
+---
+layout: default
+title: BK7084 - Final Assignment pt. 3
+---
+
 # Introduction
 
 In iterative optimization we attempt to approximate a solution to a
@@ -11,7 +16,7 @@ close our approximation is to the actual optimal solution.
 Imagine we were trying to computationally generate the following layout
 of colors over the grid cells (1-9).
 
-![Optimal solution](images/finalproject/State1.png)
+![Optimal solution](../assets/images/finalproject/State1.png)
 
 It is a simple problem, because we know exactly how the colors should be
 laid out to achieve this solution. However, the solution isn’t always
@@ -23,7 +28,7 @@ iterative optimization instead.
 The first step to solving this algorithmically is to simply choose a
 random layout of colors.  
 
-![Initial guess](images/finalproject/State2.png)
+![Initial guess](../assets/images/finalproject/State2.png)
 
 How good is this random guess? How close is it to the optimal layout?
 Let’s set up some rules for how correct a layout is, for example:  
@@ -72,7 +77,7 @@ The longer you let this algorithm generate random layouts the greater
 the chance that your layout approaches the optimal solution shown in
 Figure 1. Observe the following progression:  
 
-![Iterative Progression](images/finalproject/Progression.png)
+![Iterative Progression](../assets/images/finalproject/Progression.png)
 
 It starts with a random layout with a score of 1, then a new layout is
 generated that has a score of 3. We keep this new layout, since the

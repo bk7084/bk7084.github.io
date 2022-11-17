@@ -105,7 +105,7 @@ To test if everything works well, try enter `python` after activation of
 the environment. You should be able to see a python interpreter popped
 up:
 
-![image](assets/images/crashcourse/linux-prompt.png)
+![image](assets/../assets/images/crashcourse/linux-prompt.png)
 
 ## Install Visual Studio Code and the Python Extension
 
@@ -114,30 +114,30 @@ up:
 Go to <https://code.visualstudio.com/Download> and download the
 corresponding installer for your system.
 
-![image](assets/images/crashcourse/vscode-download.png)
+![image](assets/../assets/images/crashcourse/vscode-download.png)
 <span id="fig:vscode-download" label="fig:vscode-download">\[fig:vscode-download\]</span>
 
 Once the Visual Studio Code editor is installed, install the Python
 extension. Open your Visual Studio Code, and search python in
 **Extensions** tab.
 
-![image](assets/images/crashcourse/vscode-ext.png)
+![image](assets/../assets/images/crashcourse/vscode-ext.png)
 
 ### Start VS Code in a project folder
 
 Create an empty folder called *hello*, and open the folder from VS Code:
 **Menu** \> **File** \> **Open Folder...**
 
-![image](assets/images/crashcourse/vscode-open.png)
+![image](assets/../assets/images/crashcourse/vscode-open.png)
 
 From the File Explorer toolbar, select the **New File** button on the
 `hello` folder:
 
-![image](assets/images/crashcourse/vscode-new.png)
+![image](assets/../assets/images/crashcourse/vscode-new.png)
 
 Name the file **hello.py**, and it automatically opens in the editor:
 
-![image](assets/images/crashcourse/vscode-newfile.png)
+![image](assets/../assets/images/crashcourse/vscode-newfile.png)
 
 Enter the following source code in **hello.py**:
 
@@ -160,17 +160,17 @@ we just created. Click to choose it. If you don’t see the name
 and reopen the VS Code, you should now be able to choose the environment
 that we created.
 
-![image](assets/images/crashcourse/vscode-env.png)
+![image](assets/../assets/images/crashcourse/vscode-env.png)
 
 Now you can run the script by simply click the **Run Python File in
 Terminal** play button in the top-right side of the editor.
 
-![image](assets/images/crashcourse/vscode-run.png)
+![image](assets/../assets/images/crashcourse/vscode-run.png)
 
 The button opens terminal panel in which your Python interpreter is
 automatically activated, then runs `python hello.py`.
 
-![image](assets/images/crashcourse/vscode-tml.png)
+![image](assets/../assets/images/crashcourse/vscode-tml.png)
 
 As you can see, the **Hello World** is successfully printed on the
 screen in terminal.
@@ -180,7 +180,7 @@ screen in terminal.
 To get your assignments, go to <https://github.com/bk7084/assignments>,
 click **Code** then **Download ZIP**.
 
-![image](assets/images/crashcourse/assignments.png)
+![image](assets/../assets/images/crashcourse/assignments.png)
 
 Extract the zip file to your preferred location. Open the folder
 **00\_introduction** in VS Code, then open the file **into.py**. You can
@@ -188,7 +188,7 @@ try to run the file by clicking the **Run Python File** on top-right.
 Your terminal probably gives the same error as mine:
 *ModuleNotFoundError: No module named ’bk7084’*
 
-![image](assets/images/crashcourse/error_msg.png)
+![image](assets/../assets/images/crashcourse/error_msg.png)
 
 So, what exactly is a Python module? Simply put, a module is a python
 file that contains definitions of functions, classes, and variables. In
@@ -214,7 +214,7 @@ standard library.
 Once the installation is finished, try again to run the **intro.py**,
 you should have a window with a brownish triangle drawn above like this:
 
-![image](assets/images/crashcourse/intro-cap.png)
+![image](assets/../assets/images/crashcourse/intro-cap.png)
 
 Congratulations\! You now have a Python environment with necessary
 packages to run all the exercises. Continue read the text inside
