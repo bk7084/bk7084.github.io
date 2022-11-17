@@ -37,7 +37,7 @@ In lecture 1 we saw the following equation:
 
 \[
   \mathbf{r} + t\mathbf{d} = \mathbf{a} + \beta(\mathbf{b} - \mathbf{a}) + \gamma(\mathbf{c}-\mathbf{a}),
-\label{eq:raytriintersection}
+  \label{eq:raytriintersection}
 \]
 
 where the left side defines a point on a
@@ -60,7 +60,7 @@ specifically:
     \beta + \gamma \leq 1.\end{aligned}\]
 
 We also saw that Equation
-[\[eq:raytriintersection\]](#eq:raytriintersection) is actually not
+$\eqref{eq:raytriintersection}$ is actually not
 *one* equation, but three: one equation for each axis. We can thus
 rewrite Equation [\[eq:raytriintersection\]](#eq:raytriintersection) as:
 
@@ -84,22 +84,25 @@ Linear systems are commonly expressed in a matrix notation as it makes
 any computation much simpler. The above equations can then be written
 as:
 
-\[\begin{bmatrix}
+\[
+\begin{matrix}
  a_x-b_x & a_x - c_x & dx \\
  a_y-b_y & a_y - c_y & dy \\
  a_z-b_z & a_z - c_z & dz
-\end{bmatrix}
-\begin{bmatrix}
+\end{matrix}
+
+\begin{matrix}
  \beta \\
  \gamma \\
  t
-\end{bmatrix} =
-\begin{bmatrix}
+\end{matrix} =
+
+\begin{pmatrix}
  a_x - r_x \\
  a_y - r_y \\
  a_z - r_z
-
-\end{bmatrix}\]
+\end{pmatrix}
+\]
 
 *We encourage you to check this.* Real understanding comes from working
 through problems. Try to go from the matrix notation back to the three
