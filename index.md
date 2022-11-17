@@ -2,122 +2,219 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+# Introduction
 
-[Link to another page](./another-page.html).
+Welcome to the BK7084-Computational Simulation. This is a tutorial to
+help you setup the Python programming environment so that you can jump
+right into the practical courses. To learn more about python, please
+follow any of the programming tutorials on python.org:
+<https://wiki.python.org/moin/BeginnersGuide/Programmers>
 
-There should be whitespace between paragraphs.
+# Coding Environment Setup
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+## Install a Python interpreter
 
-# Header 1
+Python is pre-installed on macOS and Linux, while Windows users must
+manually install it. Installing the most recent version will give you
+access to the newest features. Different Python interpreters can be
+installed on the same machine at the same time. To make things easier to
+manage, we use a Python environment manager: Anaconda to install Python
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+### Install mini-anaconda
 
-## Header 2
+#### Windows
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+  
+Step 1: download the latest Miniconda installer for Windows 64-bit from
+<https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links>.
 
-### Header 3
+Step 2: Double-click the `.exe` file.
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
+Step 3: Follow the instructions on the screen. If you are unsure about
+any setting, accept the defaults. You can always change them later. When
+the installation is complete, launch the Anaconda Prompt from the
+**Start** menu.
+
+Step 4: To test your installation. Run the `conda list` command from
+your Anaconda prompt. A list of installed packages appears if it has
+been installed correctly.
+
+#### macOS
+
+  
+Enter your terminal, then follow the steps:
+
+Step 1: Download the latest shell script according to your processor’s
+architecture (Intel or Apple M1) from
+<https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links>.
+
+Step 2: Double-click the downloaded installer and then follow the
+instructions on the screen.
+
+Step 3: Test your installation. Run the `conda list` command from your
+Anaconda prompt. A list of installed packages appears if it has been
+installed correctly.
+
+#### Linux
+
+  
+Enter your terminal, then follow the steps:
+
+Step 1: Download the latest shell script
+
+``` bash
+    $ wget -c https://repo.anaconda.com/miniconda/Miniconda3
+    -latest-Linux-x86_64.sh
 ```
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
+Step 2: Run the installation script then follow the instructions on the
+screen
+
+``` shell
+    $ sh ./Miniconda3-latest-Linux-x86_64.sh
 ```
 
-#### Header 4
+Step 3: To test your installation. In your terminal, run the command
+`conda list`. A list of installed packages appears if it has been
+installed correctly.
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+### Create a new Python environment
 
-##### Header 5
+After the installation of mini-anaconda, next step will be creating a
+Python environment for running Python code. An environment contains the
+Python interpreter and some other necessary Python packages.
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+Inside of your terminal or Anaconda Prompt (on Windows) run the
+following command:
 
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
+``` shell
+$ conda create --name bk7084-env
 ```
 
+This will create a environment named as **`bk7084-env`**. Of course you
+can name it whatever you want. Later we will install some packages
+inside of this environment. Right after the creation, you can activate
+this environment use
+
+``` shell
+$ conda activate bk7084-env
 ```
-The final element.
+
+To test if everything works well, try enter `python` after activation of
+the environment. You should be able to see a python interpreter popped
+up:
+
+![image](images/crashcourse/linux-prompt.png)
+
+## Install Visual Studio Code and the Python Extension
+
+### Visual Studio Code
+
+Go to <https://code.visualstudio.com/Download> and download the
+corresponding installer for your system.
+
+![image](images/crashcourse/vscode-download.png)
+<span id="fig:vscode-download" label="fig:vscode-download">\[fig:vscode-download\]</span>
+
+Once the Visual Studio Code editor is installed, install the Python
+extension. Open your Visual Studio Code, and search python in
+**Extensions** tab.
+
+![image](images/crashcourse/vscode-ext.png)
+
+### Start VS Code in a project folder
+
+Create an empty folder called *hello*, and open the folder from VS Code:
+**Menu** \> **File** \> **Open Folder...**
+
+![image](images/crashcourse/vscode-open.png)
+
+From the File Explorer toolbar, select the **New File** button on the
+`hello` folder:
+
+![image](images/crashcourse/vscode-new.png)
+
+Name the file **hello.py**, and it automatically opens in the editor:
+
+![image](images/crashcourse/vscode-newfile.png)
+
+Enter the following source code in **hello.py**:
+
+``` python
+    print("Hello World")
 ```
+
+Before we run it, we need to select a Python interpreter: within VSCode,
+open the **Command Palette** (*Ctrl+Shift+P*), and then type **Python:
+Select Interpreter** command to search, then select the command. The
+command presents a list of available interpreters that VS Code can find
+automatically, you should be able to see **bk7084-env**, the environment
+we just created. Click to choose it. If you don’t see the name
+**bk7084-env**, close VS Code, open Ananconda-Prompt then run command
+
+``` bash
+    conda activate bk7084-env
+```
+
+and reopen the VS Code, you should now be able to choose the environment
+that we created.
+
+![image](images/crashcourse/vscode-env.png)
+
+Now you can run the script by simply click the **Run Python File in
+Terminal** play button in the top-right side of the editor.
+
+![image](images/crashcourse/vscode-run.png)
+
+The button opens terminal panel in which your Python interpreter is
+automatically activated, then runs `python hello.py`.
+
+![image](images/crashcourse/vscode-tml.png)
+
+As you can see, the **Hello World** is successfully printed on the
+screen in terminal.
+
+# Assignments Setup
+
+To get your assignments, go to <https://github.com/bk7084/assignments>,
+click **Code** then **Download ZIP**.
+
+![image](images/crashcourse/assignments.png)
+
+Extract the zip file to your preferred location. Open the folder
+**00\_introduction** in VS Code, then open the file **into.py**. You can
+try to run the file by clicking the **Run Python File** on top-right.
+Your terminal probably gives the same error as mine:
+*ModuleNotFoundError: No module named ’bk7084’*
+
+![image](images/crashcourse/error_msg.png)
+
+So, what exactly is a Python module? Simply put, a module is a python
+file that contains definitions of functions, classes, and variables. In
+our case, it means that we need to install this module or package named
+**bk7084**.
+
+Open Anaconda-Prompt, then activate **bk7084-env** using
+
+``` bash
+    conda activate bk7084-env
+```
+
+type the following command to install the missing **bk7084** module
+
+``` bash
+    pip install bk7084
+```
+
+***pip*** is the standard package manager for Python. It allows you to
+install and manage additional packages that are not part of the Python
+standard library.
+
+Once the installation is finished, try again to run the **intro.py**,
+you should have a window with a brownish triangle drawn above like this:
+
+![image](images/crashcourse/intro-cap.png)
+
+Congratulations\! You now have a Python environment with necessary
+packages to run all the exercises. Continue read the text inside
+**intro.py** and finish the exercise.
