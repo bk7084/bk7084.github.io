@@ -60,10 +60,12 @@ We also saw that Equation
 *one* equation, but three: one equation for each axis. We can thus
 rewrite Equation [\[eq:raytriintersection\]](#eq:raytriintersection) as:
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 r_x + td_x &= a_x + \beta(b_x - a_x) + \gamma(c_x-a_x), \\
 r_y + td_y &= a_y + \beta(b_y - a_y) + \gamma(c_y-a_y), \\
-r_z + td_z &= a_z + \beta(b_z - a_z) + \gamma(c_z-a_z).\end{aligned}\]
+r_z + td_z &= a_z + \beta(b_z - a_z) + \gamma(c_z-a_z).\end{aligned}
+\]
 
 The linear system above contains three unknowns: \(\beta\), \(\gamma\)
 and \(t\). We have a ray and a triangle, and we want to find a point
