@@ -9,38 +9,40 @@ Solve the following linear systems with 3 variables:
 
 ### 1
 
-\(4a + 2b + 3c = 5\)  
-\(-2b + 5c = -9\)  
-\(6c = -6\)  
+$4a + 2b + 3c = 5$  
+$-2b + 5c = -9$  
+$6c = -6$  
 
 ### 2
 
-\(5x + 3y + 2z = 15\)  
-\(2y + 4z = 24\)  
-\(y - 4z = -42\)  
+$5x + 3y + 2z = 15$  
+$2y + 4z = 24$  
+$y - 4z = -42$  
 
 ### 3
 
-\(3x + y + 3z = -2\)  
-\(6x + 2y + 9z = 5\)  
-\(-2x - y - z = 3\)
+$3x + y + 3z = -2$  
+$6x + 2y + 9z = 5$  
+$-2x - y - z = 3$
 
 # Linear Algebra
 
 **1.** In summer Katie decided to go on a hike in the mountains. Her
 journey can be described by three displacement vectors (distance and
-direction) \(\mathbf{d_1}\), \(\mathbf{d_2}\) and \(\mathbf{d_3}\).  
+direction) $\mathbf{d_1}$, $\mathbf{d_2}$ and $\mathbf{d_3}$.  
   
-\(\mathbf{d_1} = (7, 8)\)  
-\(\mathbf{d_2} = (6, 2)\)  
-\(\mathbf{d_3} = (2, 9)\)  
+$\mathbf{d_1} = (7, 8)$  
+$\mathbf{d_2} = (6, 2)$  
+$\mathbf{d_3} = (2, 9)$  
   
 Distances are given in kilometers.  
   
 How far is Katie from home at the end of her hike? What overall
 direction did she walk in?  
-**2.** Multiply the following matrices:  
-\[\begin{bmatrix}
+**2.** Multiply the following matrices:
+
+$$
+\begin{bmatrix}
     4 & 2 & 3 \\
     2 & 1 & 5 \\
 \end{bmatrix}
@@ -49,10 +51,14 @@ direction did she walk in?
     -3 & 6\\
     3 & -5\\
     -4 & 3
-\end{bmatrix}\]  
+\end{bmatrix}
+$$
+
 **3.** Figure out possible values the second matrix so that the equation
-is correct:  
-\[\begin{bmatrix}
+is correct:
+
+$$
+\begin{bmatrix}
     7 & 2 \\
     3 & 1 \\
 \end{bmatrix}
@@ -65,10 +71,14 @@ is correct:
 \begin{bmatrix}
     4\\
     1\\
-\end{bmatrix}\]  
+\end{bmatrix}
+$$
+
 **4.** How many rows and columns should matrix B have so that the
-multiplication is valid?  
-\[\begin{bmatrix}
+multiplication is valid?
+
+$$
+\begin{bmatrix}
     3 & -6 & 1 & 2\\
     4 & 1 & -1 & 2\\
 \end{bmatrix}
@@ -78,14 +88,19 @@ B
 \begin{bmatrix}
     4 & 1\\
     1 & 5\\
-\end{bmatrix}\]  
+\end{bmatrix}
+$$
+
 **5.** Bring the following matrix into row-echelon form. Then bring it
-into reduced row-echelon form.  
-\[\begin{bmatrix}
+into reduced row-echelon form.
+
+$$
+\begin{bmatrix}
     2 & 4 & 2\\
     1 & 3 & 3\\
     0 & 2 & 2\\
-\end{bmatrix}\]
+\end{bmatrix}
+$$
 
 # Transformations
 
@@ -100,29 +115,38 @@ Apply it to such a point to check your answer.
 
 What type of transformation is the following matrix responsible for?
 Sketch what it would do to our test subject.  
-\[\begin{bmatrix}
+
+$$
+\begin{bmatrix}
     1 & 0\\
     0 & -1\\
-\end{bmatrix}\]
+\end{bmatrix}
+$$
 
 ### 3\.
 
 What type of transformation is the following matrix responsible for?
 Sketch what it would do to our test subject.  
-\[\begin{bmatrix}
+
+$$
+\begin{bmatrix}
     1 & 2\\
     0 & 1\\
-\end{bmatrix}\]
+\end{bmatrix}
+$$
 
 ### 4\.
 
 What type of transformation is the following matrix responsible for? On
 which axis? Sketch what it would do to our test subject.  
-\[\begin{bmatrix}
+
+$$
+\begin{bmatrix}
     0.707 & -0.707 & 0\\
     0.707 & 0.707 & 0\\
     0 & 0 & 1\\
-\end{bmatrix}\]
+\end{bmatrix}
+$$
 
 ### 5\.
 

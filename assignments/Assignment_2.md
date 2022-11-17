@@ -105,9 +105,14 @@ $\mathbf{p}$. You could first compute the rotation
 \\[\mathbf{p}'' = \mathbf{Tp}'.\\] Another way to write this is
 \\[\mathbf{p}' = \\mathbf{TRp}.\] You could also first compute the product
 of the matrices $\mathbf{T}$ and $\mathbf{R}$ and then multiply the
-result with $\mathbf{p}$. \[\begin{aligned}
+result with $\mathbf{p}$.
+
+$$
+\begin{aligned}
     \mathbf{M} = \mathbf{TR} \\
-    \mathbf{p}' = \mathbf{Mp}.\end{aligned}\]
+    \mathbf{p}' = \mathbf{Mp}.
+\end{aligned}
+$$
 
 This is possible, because matrix products are *associative*, a fancy
 word to say that $(\mathbf{AB})\mathbf{C} = \mathbf{A}(\mathbf{BC})$.
@@ -131,7 +136,10 @@ multiplication?
 
 **Matrix multiplications are not commutative**. That means you cannot
 change the order of matrices and expect the same result. Try it out
-yourself: \[\begin{aligned}
+yourself:
+
+$$
+\begin{aligned}
     \begin{bmatrix}
      1 & 3  \\
      4 & 2  \\
@@ -139,7 +147,7 @@ yourself: \[\begin{aligned}
     \begin{bmatrix}
      20 & 10  \\
      40 & 60  \\
-    \end{bmatrix} &= ? \\
+    \end{bmatrix} &= ? \\\\
     \begin{bmatrix}
      20 & 10  \\
      40 & 60  \\
@@ -148,7 +156,8 @@ yourself: \[\begin{aligned}
      1 & 3  \\
      4 & 2  \\
     \end{bmatrix} 
-    &= ?\end{aligned}\]
+    &= ?\end{aligned}
+$$
 
 $\rightarrow$ What is the difference between first rotating and then
 translating and first translating and then rotating?
