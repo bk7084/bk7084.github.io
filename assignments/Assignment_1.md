@@ -35,10 +35,10 @@ There are three subtasks, all to be completed in
 
 In lecture 1 we saw the following equation:
 
-\[
+\\[
   \mathbf{r} + t\mathbf{d} = \mathbf{a} + \beta(\mathbf{b} - \mathbf{a}) + \gamma(\mathbf{c}-\mathbf{a}),
   \label{eq:raytriintersection}
-\]
+\\]
 
 where the left side defines a point on a
 ray and the right side a point on the plane of a triangle. More
@@ -54,22 +54,25 @@ specifically:
     triangle’s plane.
 
   - When the following conditions for $\beta$ and $\gamma$ are
-    satisfied, the point is inside the triangle: \[\begin{aligned}
+    satisfied, the point is inside the triangle: 
+    \\[\begin{aligned}
     \beta \geq 0, \\
     \gamma \geq 0, \\
-    \beta + \gamma \leq 1.\end{aligned}\]
+    \beta + \gamma \leq 1.\end{aligned}
+    \\]
 
 We also saw that Equation
 $\eqref{eq:raytriintersection}$ is actually not
 *one* equation, but three: one equation for each axis. We can thus
-rewrite Equation [\[eq:raytriintersection\]](#eq:raytriintersection) as:
+rewrite Equation $\eqref{eq:raytriintersection}$ as:
 
-\[
+$$
 \begin{aligned}
-r_x + td_x &= a_x + \beta(b_x - a_x) + \gamma(c_x-a_x), \\
-r_y + td_y &= a_y + \beta(b_y - a_y) + \gamma(c_y-a_y), \\
-r_z + td_z &= a_z + \beta(b_z - a_z) + \gamma(c_z-a_z).\end{aligned}
-\]
+r_x + td_x &= a_x + \beta(b_x - a_x) + \gamma(c_x-a_x)\\\\
+r_y + td_y &= a_y + \beta(b_y - a_y) + \gamma(c_y-a_y)\\\\
+r_z + td_z &= a_z + \beta(b_z - a_z) + \gamma(c_z-a_z)
+\end{aligned}
+$$
 
 The linear system above contains three unknowns: $\beta$, $\gamma$
 and $t$. We have a ray and a triangle, and we want to find a point
@@ -84,25 +87,25 @@ Linear systems are commonly expressed in a matrix notation as it makes
 any computation much simpler. The above equations can then be written
 as:
 
-\[
-\begin{matrix}
+$$
+\begin{bmatrix}
  a_x-b_x & a_x - c_x & dx \\
  a_y-b_y & a_y - c_y & dy \\
  a_z-b_z & a_z - c_z & dz
-\end{matrix}
+\end{bmatrix}
 
-\begin{matrix}
+\begin{bmatrix}
  \beta \\
  \gamma \\
  t
-\end{matrix} =
+\end{bmatrix} =
 
-\begin{pmatrix}
+\begin{bmatrix}
  a_x - r_x \\
  a_y - r_y \\
  a_z - r_z
-\end{pmatrix}
-\]
+\end{bmatrix}
+$$
 
 *We encourage you to check this.* Real understanding comes from working
 through problems. Try to go from the matrix notation back to the three
