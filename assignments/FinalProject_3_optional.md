@@ -1,9 +1,9 @@
 ---
 layout: default
-title: BK7084 - Final Assignment pt. 3
+title: BK7084 - Final 2 advanced
 ---
 
-# Introduction
+# Advanced optimization
 
 In iterative optimization we attempt to approximate a solution to a
 problem by making an initial guess and improving this guess over the

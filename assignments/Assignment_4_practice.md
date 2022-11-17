@@ -1,9 +1,11 @@
 ---
 layout: default
-title: BK7084 - Assignment 4
+title: BK7084 - Week 4
 ---
 
-# Solving linear systems
+# Exam practice
+
+## Solving linear systems
 
 Solve the following linear systems with 3 variables:  
 

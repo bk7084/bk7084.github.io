@@ -1,9 +1,9 @@
 ---
 layout: default
-title: BK7084 - Assignment 1
+title: BK7084 - Week 1
 ---
 
-# Description
+# Assignment 1
 
 Your first assignment is to write a program for a ray-triangle
 intersection. This is one of the core tests for many light simulation

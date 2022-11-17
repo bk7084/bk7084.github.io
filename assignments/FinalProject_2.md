@@ -1,10 +1,9 @@
 ---
 layout: default
-title: BK7084 - Final Assignment pt. 2
+title: BK7084 - Final 2
 ---
 
-# City optimization pt. 1
-_[More advanced optimization]({% link assignments/FinalProject_3_optional.md %})_
+# Final Project, part 2: City optimization
 
 In the second part of the final project, you are going to implement an
 optimization algorithm to make your city a city that people would love
@@ -87,6 +86,7 @@ plots and see if it is better. Running this for a while will get you
 better and better layouts of your city, but it will take a long time.
 
 There are many better ways to optimize the city in a more direct manner.
+You can learn about this in [the following document]({% link assignments/FinalProject_3_optional.md %}).
 Try to come up with your own clever solution for improving this naive
 optimization. In your demo presentation you will show the iterative
 optimization process in real-time.

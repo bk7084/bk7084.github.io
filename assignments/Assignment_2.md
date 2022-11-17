@@ -1,9 +1,9 @@
 ---
 layout: default
-title: BK7084 - Assignment 2
+title: BK7084 - Week 2
 ---
 
-# Introduction
+# Assignment 2
 
 In this assignment, we will dive deeper into transformations. It’s
 important that you get how to apply transformations to objects in 3D

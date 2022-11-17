@@ -1,9 +1,9 @@
 ---
 layout: default
-title: BK7084 - Final Assignment pt. 1
+title: BK7084 - Final 1
 ---
 
-# Procedural Building Generation
+# Final Project, part 1: Procedural Building Generation
 
 In your final project your task will be to procedurally generate a city
 and optimise its layout to become a city where people would like to

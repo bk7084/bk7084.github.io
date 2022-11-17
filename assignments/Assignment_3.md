@@ -1,7 +1,9 @@
 ---
 layout: default
-title: BK7084 - Assignment 3
+title: BK7084 - Week 3
 ---
+
+# Assignment 3
 
 When you first run the program, you will see the outline of the head of
 the famous statue of David by Michelangelo, as shown in
