@@ -50,7 +50,7 @@ In computer graphics simulating this kind of lighting is one of the
 hardest things to get right, but simultaneously one of the most
 important factors on a scene’s photo realism.  
 
-![Direct vs. Direct+Indirect Lighting](../assets/images/assignment3/Indirect)
+![Direct vs. Direct+Indirect Lighting](../assets/images/assignment3/Indirect.jpg)
 
 Since it is so hard to approximate, old graphics applications used to
 make it easy for themselves and just assume all objects are hit by some
@@ -89,7 +89,7 @@ surface, the light intensity reaching your eye from the surface is
 proportional to the cosine of the angle between the surface normal
 vector and the direction vector from the surface to the light.
 
-![Lambert’s Cosine Law](../assets/images/assignment3/LambertLaw)
+![Lambert’s Cosine Law](../assets/images/assignment3/LambertLaw.png)
 
 As you can see in the above image, the light is most intensely reflected
 when the light direction matches up closely with the surface normal. The
@@ -163,7 +163,7 @@ diffuse and specular reflection. In the photo below, you see such a
 situation. Usually the the object looks fairly diffuse, but has a bright
 spot where the intense light is reflected specularly.  
 
-![Diffuse and Specular Reflection](../assets/images/assignment3/Reflection)
+![Diffuse and Specular Reflection](../assets/images/assignment3/Reflection.png)
 
 In computer graphics, this phenomenon has many possible approximations.
 The first one, of interest to you, was proposed by Bui Tuong Phong, and
@@ -173,8 +173,7 @@ some shiny surface. The shinier the surface, the more intense and sharp
 these specular highlights will be, the duller the surface, the more
 gradually these highlights fade away.
 
-![Phong reflection at different levels of surface
-shininess](../assets/images/assignment3/Phong)
+![Phong reflection at different levels of surface shininess](../assets/images/assignment3/Phong.png)
 
 The formula for Phong reflection is mostly empirical, but there is logic
 to it. In order to get an intense reflection of light it tries to

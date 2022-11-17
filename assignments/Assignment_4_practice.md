@@ -96,7 +96,7 @@ Apply it to such a point to check your answer.
 
 ### 2\.
 
-![Test Subject](../assets/images/assignment4/Smiley)
+![Test Subject](../assets/images/assignment4/Smiley.png)
 
 What type of transformation is the following matrix responsible for?
 Sketch what it would do to our test subject.  

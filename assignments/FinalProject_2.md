@@ -3,7 +3,8 @@ layout: default
 title: BK7084 - Final Assignment pt. 2
 ---
 
-# City optimization
+# City optimization pt. 1
+_[More advanced optimization]({% link assignments/FinalProject_3_optional.md %})_
 
 In the second part of the final project, you are going to implement an
 optimization algorithm to make your city a city that people would love
