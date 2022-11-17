@@ -19,7 +19,8 @@ Python is pre-installed on macOS and Linux, while Windows users must
 manually install it. Installing the most recent version will give you
 access to the newest features. Different Python interpreters can be
 installed on the same machine at the same time. To make things easier to
-manage, we use a Python environment manager: Anaconda to install Python
+manage, we use a Python environment manager [Anaconda](https://www.anaconda.com/) 
+to install Python.
 
 ### Install mini-anaconda
 
@@ -63,16 +64,15 @@ Enter your terminal, then follow the steps:
 
 Step 1: Download the latest shell script
 
-``` bash
-    $ wget -c https://repo.anaconda.com/miniconda/Miniconda3
-    -latest-Linux-x86_64.sh
+```shell
+$ wget -c https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
 
 Step 2: Run the installation script then follow the instructions on the
 screen
 
 ``` shell
-    $ sh ./Miniconda3-latest-Linux-x86_64.sh
+$ sh ./Miniconda3-latest-Linux-x86_64.sh
 ```
 
 Step 3: To test your installation. In your terminal, run the command
@@ -115,7 +115,6 @@ Go to <https://code.visualstudio.com/Download> and download the
 corresponding installer for your system.
 
 ![image](assets/../assets/images/crashcourse/vscode-download.png)
-<span id="fig:vscode-download" label="fig:vscode-download">\[fig:vscode-download\]</span>
 
 Once the Visual Studio Code editor is installed, install the Python
 extension. Open your Visual Studio Code, and search python in
@@ -142,7 +141,7 @@ Name the file **hello.py**, and it automatically opens in the editor:
 Enter the following source code in **hello.py**:
 
 ``` python
-    print("Hello World")
+print("Hello World")
 ```
 
 Before we run it, we need to select a Python interpreter: within VSCode,
@@ -154,7 +153,7 @@ we just created. Click to choose it. If you don’t see the name
 **bk7084-env**, close VS Code, open Ananconda-Prompt then run command
 
 ``` bash
-    conda activate bk7084-env
+$ conda activate bk7084-env
 ```
 
 and reopen the VS Code, you should now be able to choose the environment
@@ -198,13 +197,13 @@ our case, it means that we need to install this module or package named
 Open Anaconda-Prompt, then activate **bk7084-env** using
 
 ``` bash
-    conda activate bk7084-env
+$ conda activate bk7084-env
 ```
 
 type the following command to install the missing **bk7084** module
 
 ``` bash
-    pip install bk7084
+$ pip install bk7084
 ```
 
 ***pip*** is the standard package manager for Python. It allows you to
