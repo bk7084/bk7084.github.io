@@ -14,7 +14,7 @@ you to specify how David’s head should interact with the incoming light.
 ![Starting Situation](../assets/images/assignment3/initState.png)
 
 Your task in this assignment is to implement various shading functions.
-These functions are contained in the file `  ShaderFrag.glsl `. This
+These functions are contained in the file `ShaderFrag.glsl`. This
 file is written in a language called GLSL. This language is somewhat
 similar to Python, so you should be able to use your experience from
 previous assignments. In the end, the code you will write in GLSL will
