@@ -158,7 +158,7 @@ click **Code** then **Download ZIP**.
 ![image](assets/images/crashcourse/assignments.png)
 
 Extract the zip file to your preferred location. Open the folder
-**00\_introduction** in VS Code, then open the file **into.py**. You can
+**00\_introduction** in VS Code, then open the file **intro.py**. You can
 try to run the file by clicking the **Run Python File** on top-right.
 Your terminal probably gives the following error:
 *ModuleNotFoundError: No module named ’bk7084’*
@@ -192,4 +192,4 @@ you should have a window with a brownish triangle drawn above like this:
 ![image](assets/images/crashcourse/intro-cap.png)
 
 Congratulations\! You now have a Python environment with necessary
-packages to run all the exercises. Continue by reading the page on [Week 1]({% link assignments/Assignment_1.md %}) and finish the exercise.
+packages to run all the exercises. Now finish exercises inside **intro.py**.
