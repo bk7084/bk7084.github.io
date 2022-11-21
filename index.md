@@ -62,21 +62,26 @@ We can manage Python installations by setting up an _environment_. An _environme
 Inside of your Anaconda Prompt (on Windows) or Terminal (macOS, Linux)  run the following command:
 
 ``` shell
-conda create --name bk7084-env
+conda create --name compsim python=3.9
 ```
 
-This will create a environment named as **`bk7084-env`**. Of course you
+This will create a environment named as **`compsim`**. Of course you
 can name it whatever you want. Later we will install some packages
 inside of this environment. Right after the creation, you can activate
 this environment use
 
 ``` shell
-conda activate bk7084-env
+conda activate compsim
 ```
 
 To test if everything works well, type in `python` and press enter in the command prompt/terminal. You should be able to see a python interpreter popped up:
 
-![image](assets/images/crashcourse/linux-prompt.png)
+```shell
+(compsim) ~/00_introduction > python
+Python 3.9.15 (main, Nov 1 2022, 14:18:21) [GCC 12.2.0] on linux
+Type "help", "copyright", "credits", or "license" for more information.
+>>>
+```
 
 ## Install Visual Studio Code and the Python Extension
 
@@ -124,7 +129,7 @@ we just created. Click to choose it. If you don’t see the name
 **bk7084-env**, close VS Code, open Ananconda-Prompt then run command
 
 ``` bash
-conda activate bk7084-env
+conda activate compsim
 ```
 
 and reopen the VS Code, you should now be able to choose the environment
@@ -165,10 +170,10 @@ file that contains definitions of functions, classes, and variables. In
 our case, it means that we need to install this module or package named
 **bk7084**.
 
-Open Anaconda-Prompt, then activate **bk7084-env** using
+Open Anaconda-Prompt, then activate **compsim** using
 
 ``` bash
-conda activate bk7084-env
+conda activate compsim
 ```
 
 type the following command to install the missing **bk7084** module
