@@ -117,7 +117,7 @@ we use this function to compute the light score for the full grid.
 There’s quite a bit of computation happening in the background. If you
 find your program is too slow, try reducing the number of lights in
 *compute\_light\_of\_plot\_day(i, j)*, compute the light for only one
-plot, or reduce the size of your city. **You can always comment out the
+plot or for a selected plot types (e.g., only houses and parks). **You can always comment out the
 light computation while your testing other rules in your city.**
 
 # Presentation and Report
