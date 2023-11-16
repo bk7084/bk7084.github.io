@@ -1,6 +1,6 @@
 ---
 layout: default
-title: BK7084 - Week 4
+title: BK7084 - Week 2
 ---
 
 # Exam practice
