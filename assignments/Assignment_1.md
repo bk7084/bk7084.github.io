@@ -102,7 +102,7 @@ $\mathbf{T}$. The point you want to transform is called
 $\mathbf{p}$. You could first compute the rotation
 \\[\mathbf{p}' = \mathbf{Rp}\\] and then the translation
 \\[\mathbf{p}'' = \mathbf{Tp}'.\\] Another way to write this is
-\\[\mathbf{p}' = \\mathbf{TRp}.\] You could also first compute the product
+\\[\mathbf{p}' = \\mathbf{TRp}.\\] You could also first compute the product
 of the matrices $\mathbf{T}$ and $\mathbf{R}$ and then multiply the
 result with $\mathbf{p}$.
 
