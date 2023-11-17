@@ -12,7 +12,7 @@ assignment, we slowly build up complexity: first, you will create
 transformation matrices from scratch to control a virtual car. Then you
 will compose transformation matrices to construct a lamp. Finally, you
 can apply these lessons to build an animated solar system. Follow the
-comments in *ex01.py*, *ex02.py*, and *ex03.py* to finish the
+comments in *ex01.py* and *ex02.py* to finish the
 assignments. You can use this document as a reference. There are
 questions in this document. Don’t skip over them, but think about them.
 If you can’t answer them, feel free to ask one of the TAs.
