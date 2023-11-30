@@ -164,6 +164,29 @@ of the incoming light, and we arrive at the final formula:
   
 $I_S = (\mathbf{\widehat{V}} \cdot \mathbf{\widehat{R}})^n C_S I_L$
 
+# Normal Mapping
+
+Normal mapping is a technique that allows us to add more detail to a
+surface without having to add more geometry. It does this by storing
+additional information in a texture. This information is then used to
+perturb the surface normal of the object. This perturbation is then used
+in the lighting calculations to make the surface appear more detailed
+than it actually is.
+
+You can draw a normal map by hand, but it is usually easier to generate
+them either from a high resolution model or from a height map or from 
+a diffuse texture. The easiest way to generate a normal map is from a
+texture. This can be done easily in a program like Photoshop or GIMP.
+
+Here are some tutorials on how to do this:
+
+- [prior to Photoshop CS6](https://dreamlight.com/how-to-create-normal-maps-from-photographs/#Photoshop)
+- [Photoshop CS6 and later](https://www.mattrittman.com/create-normal-map-photoshop/)
+- [Photopea](https://www.photopea.com/) (free online Photoshop clone, works in browser, the same as the previous tutorial)
+- [GIMP](https://www.youtube.com/watch?v=iNN0xZeg_aQ)
+
+
+
 # Exam practice
 
 # Transformations
