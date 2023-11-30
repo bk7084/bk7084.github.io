@@ -5,39 +5,15 @@ title: BK7084 - Week 2
 
 # Assignment 3
 
-When you first run the program, you will see the outline of the head of
-the famous statue of David by Michelangelo, as shown in
-Figure [1](#fig:initState). Even though there is a light in the scene,
-the object currently does not reflect this light in any way. It is up to
-you to specify how David’s head should interact with the incoming light.
+When you first run the program, you will see a white sphere and a grayish
+plane Figure [1](#fig:blinn_phong_shading). The sphere represents light, and the plane is the object that you
+will change the appearance of in this assignment.
 
-![Starting Situation](../assets/images/assignment3/initState.png)
+![Starting Situation](../assets/images/assignment3/blinn_phong_shading.png)
 
-Your task in this assignment is to implement various shading functions.
-These functions are contained in the file `ShaderFrag.glsl`. This
-file is written in a language called GLSL. This language is somewhat
-similar to Python, so you should be able to use your experience from
-previous assignments. In the end, the code you will write in GLSL will
-be short.  
-Why use a different programming language? That’s because the code used
-for shading is typically run on your graphics card, instead of your CPU.
-The graphics card can run many simple computations at the same time,
-where your CPU can only do one at a time for each core (your laptop
-likely has 2-8 cores). This is useful when you want to compute color
-values for thousands of pixels on your screen. It’s much faster to
-compute those all at once (in parallel) than to compute them
-one-by-one.  
-One important thing to be aware of for this assignment is that you
-cannot open and edit the `.glsl` files in the Processing app. We advise
-you to open the `.pyde` file in Processing, and open the `.glsl` files
-in a text editor (e.g. Notepad). Place the Processing and Notepad window
-side by side and edit your program this way.
-
-**Note: GLSL files require a semicolon (;) at the end of every line. If
-something goes wrong, first check that every line has a ; at the end\!
-More notes on GLSL at the end of this document.**
-
-# Assignment 1
+Your task in this assignment is to understand how the material is influencing
+the appearance of the object. You will do this by changing the material
+properties of the object.
 
 ## Ambient lighting
 
@@ -57,20 +33,7 @@ important factors on a scene’s photo realism.
 Since it is so hard to approximate, old graphics applications used to
 make it easy for themselves and just assume all objects are hit by some
 constant amount of background light. This is a very crude approximation
-and in no way photo-realistic, but it is better than nothing.  
-
-### Your task
-
-As the first step to make the David bust reflect some light, we will do
-the same. The file `ShaderFrag.glsl` contains a function called
-`Ambient`. It is your task to fill in this function to return a `vec3`
-containing the ambient reflection. Therefore, you have to choose an
-ambient light intensity (to your taste) and multiply it with the
-object’s surface color. Keep in mind that the background light will be
-added in addition to all other reflected light, so the final ambient
-reflection should be quite dark.
-
-# Assignment 2
+and in no way photo-realistic, but it is better than nothing.
 
 ## Diffuse Reflection
 
@@ -131,24 +94,7 @@ are not considering the color of the surface and the intensity of the
 light yet. If we multiply these factors by the cosine law we obtain the
 final equation:  
   
-$I_D = \mathbf{\widehat{L}} \cdot \mathbf{\widehat{N}} C_S I_L$  
-  
-
-### Your task
-
-The file `ShaderFrag.frag` contains a function called `Lambert`. This
-function receives two parameters: A `vec3` called N, which is the
-normalized surface normal vector, and a `vec3` called L, which is the
-normalized light direction vector. It is your task to fill in this
-function to return a `vec3` containing the reflected lambertian light
-$I_D$. In addition to the named parameters, you have access to a
-variable containing the light intensity `lightDiffuse` and a variable
-containing the surface color `passColor`. **Note**: you might want to
-clamp the value to 0 if it is less than 0, since it will not have
-physical meaning in our current light simulation.  
-  
-
-# Assignment 3
+$I_D = \mathbf{\widehat{L}} \cdot \mathbf{\widehat{N}} C_S I_L$
 
 ## Specular Reflection
 
@@ -216,165 +162,9 @@ $I_S = (\mathbf{\widehat{V}} \cdot \mathbf{\widehat{R}})^n$
 Again we have to account for the color of the surface and the intensity
 of the incoming light, and we arrive at the final formula:  
   
-$I_S = (\mathbf{\widehat{V}} \cdot \mathbf{\widehat{R}})^n C_S I_L$  
-  
-
-### Your task
-
-The file `ShaderFrag.frag` contains a function called `Phong`. This
-function receives three parameters: A `vec3` called N, which is the
-normalized surface normal vector, a `vec3` called L, which is the
-normalized light direction vector (from the surface to the light) and V
-which is the normalized direction vector from the surface to the
-observer. It is your task to fill in this function to return a `vec3`
-containing the reflected specular light $I_S$. In addition to the
-named parameters, you have access to a variable containing the light
-intensity `lightSpecular` and a variable containing the surface color
-`passColor`.  
-  
-Please note that you also need to check whether the pixel is visible or
-not. If it is invisible, then you need to set the value to be zero.  
-
-![Expected final Situation](../assets/images/assignment3/finalState.png)
-
-  
-If all 3 parts of the shader are implemented properly, your result will
-be similar to Figure [2](#fig:FinalResult)
-
-### Bonus task
-
-A more stable and performant algorithm to approximate these specular
-highlights was proposed by Jim Blinn. This modification to the Phong
-algorithm is named the Blinn-Phong shading model. On Wikipedia look up
-what alterations Jim made to the algorithm and change your Phong
-implementation to incorporate these changes.
-
-# GLSL Language
-
-Shaders (vertex and fragment shaders in our case) are written in the
-<span>C</span>-like language, callsed GLSL. GLSL is tailored for use
-with graphics and it has useful features specifically built for vector
-and matrix manipulation.
-
-Below are some functionalities that you might need to refer while
-finishing **Assignment 3**.
-
-|                                    |                                                                            |
-| :--------------------------------- | :------------------------------------------------------------------------- |
-| **Syntax**                         | **Functionality**                                                          |
-| `vec3(0); or vec3(1.0, 0.3, 0.3);` | To construct a vector with 3 elements                                      |
-| `v = vectorA * vectorB`;           | To multiply (element-wise) two vectors.                                    |
-| `v = vectorA + vectorB`;           | To add two vectors `vectorA` and `vectorB` and store it in vector `v`      |
-| `v = vectorA - vectorB`;           | To substract `vectorB` from `vectorA`.                                     |
-| `dot(A,B)`;                        | To perform dot product of vector `A` and `B` (return a scalar)             |
-| `max(a,b)`;                        | To pick the maximum of two values a and b                                  |
-| `pow(a,n)`;                        | To compute the power of a by a factor of n ($a^n$)                       |
-| `light.xyz`;                       | To access the first 3 entries of vector `light` (possibly has 3-4 entries) |
-| `normalize(vectorA)`;              | To normalize `vectorA`                                                     |
-
-**Note**: make sure that you terminate every line of code in GLSL with a
-semicolon (*i.e.*`;`).
+$I_S = (\mathbf{\widehat{V}} \cdot \mathbf{\widehat{R}})^n C_S I_L$
 
 # Exam practice
-
-## Solving linear systems
-
-Solve the following linear systems with 3 variables:
-
-### 1
-
-$4a + 2b + 3c = 5$  
-$-2b + 5c = -9$  
-$6c = -6$
-
-### 2
-
-$5x + 3y + 2z = 15$  
-$2y + 4z = 24$  
-$y - 4z = -42$
-
-### 3
-
-$3x + y + 3z = -2$  
-$6x + 2y + 9z = 5$  
-$-2x - y - z = 3$
-
-# Linear Algebra
-
-**1.** In summer Katie decided to go on a hike in the mountains. Her
-journey can be described by three displacement vectors (distance and
-direction) $\mathbf{d_1}$, $\mathbf{d_2}$ and $\mathbf{d_3}$.
-
-$\mathbf{d_1} = (7, 8)$  
-$\mathbf{d_2} = (6, 2)$  
-$\mathbf{d_3} = (2, 9)$
-
-Distances are given in kilometers.
-
-How far is Katie from home at the end of her hike? What overall
-direction did she walk in?  
-**2.** Multiply the following matrices:
-
-$$
-\begin{bmatrix}
-4 & 2 & 3 \\
-2 & 1 & 5 \\
-\end{bmatrix}
-\times
-\begin{bmatrix}
--3 & 6\\
-3 & -5\\
--4 & 3
-\end{bmatrix}
-$$
-
-**3.** Figure out possible values the second matrix so that the equation
-is correct:
-
-$$
-\begin{bmatrix}
-7 & 2 \\
-3 & 1 \\
-\end{bmatrix}
-\times
-\begin{bmatrix}
-?\\
-?
-\end{bmatrix}
-=
-\begin{bmatrix}
-4\\
-1\\
-\end{bmatrix}
-$$
-
-**4.** How many rows and columns should matrix B have so that the
-multiplication is valid?
-
-$$
-\begin{bmatrix}
-3 & -6 & 1 & 2\\
-4 & 1 & -1 & 2\\
-\end{bmatrix}
-\times
-B
-=
-\begin{bmatrix}
-4 & 1\\
-1 & 5\\
-\end{bmatrix}
-$$
-
-**5.** Bring the following matrix into row-echelon form. Then bring it
-into reduced row-echelon form.
-
-$$
-\begin{bmatrix}
-2 & 4 & 2\\
-1 & 3 & 3\\
-0 & 2 & 2\\
-\end{bmatrix}
-$$
 
 # Transformations
 
@@ -427,33 +217,3 @@ $$
 We are drawing a 3D bunny on screen, but would like to make it twice as
 big and rotate it by 180 degrees on the X-axis. Form a single matrix to
 perform this operation.
-
-# Shading
-
-From a light located at position (-2, 3) a light beam hits a surface at
-(0, 0). The surface has a normal vector of (0, 1).
-
-**1.** Assuming perfect mirror reflection what direction will the beam
-reflect in?
-
-**2.** What direction would the light reflect in if the surface were
-rotated counter-clockwise by 10 degrees?
-
-**3.** Assuming the light source only emits purple light, and after
-reflecting off the surface only red light remains. What colour would the
-surface have to an observer?
-
-**4.** What colour would the surface have if the light were blue?
-
-**5.** Assuming white light and a perfectly diffuse surface which does
-not absorb light and has the original normal vector. An observer is
-looking at the surface from the point (1, 3). What fraction of light
-reaching the surface would reach an observer?
-
-**6.** In the Phong reflection model where the surface has a shininess
-factor (n) of 32, would the observer see a specular highlight at this
-position on the surface?
-
-**7.** Visually demonstrate why the equation for calculating the
-reflection vector works in the case of the light direction pointing
-toward the surface, and of it pointing toward the light.
