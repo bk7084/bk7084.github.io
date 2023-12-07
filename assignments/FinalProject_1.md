@@ -38,7 +38,7 @@ the geometry that you want (triangles, circles, cylinders, anything).
 ## Creating a building
 
 The buildings in *buildings.py* are simply collections of components
-that you add by calling *self.append()*. When you add a component to a
+that you add by calling *app.add_mesh()*. When you add a component to a
 building, you can set the parent of a component. A component inherits
 the transformations that are applied to its parent. This is helpful if
 you want to define transformations relative to other components. For
