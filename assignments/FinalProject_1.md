@@ -22,18 +22,17 @@ parameters:
 
 It is up to you to complete these classes to generate each building.
 Design your own building for each class, using the knowledge from the
-past assignments (drawing triangles, transformations, and shaders). Feel
-free to experiment with different settings and add parameters that you
-like. You don’t specifically have to make a skyscraper, highrise or
-office if you have other plans for cool buildings. Just make sure you
-have buildings with three distinct heights.
+past assignments. Feel free to experiment with different settings and
+add parameters that you like. You don’t specifically have to make a
+skyscraper, highrise or office if you have other plans for cool buildings.
+Just make sure you have buildings with three distinct heights.
 
 We have created a basic *Skyscraper* class, which stacks a number of
 cube-like floors. Each floor consists of four walls and two floor
 components. Such components are defined in the file *components.py*.
 Take a look at the class *BasicWall* and follow the comments to
-understand how it works. We have also set up *WindowWall* and *Floor* to
-get you started. You are free to add your own components to create just
+understand how it works. We have also set up *BasicWindowWall* and *BasicFloor* 
+to get you started. You are free to add your own components to create just
 the geometry that you want (triangles, circles, cylinders, anything).
 
 ## Creating a building
@@ -74,4 +73,5 @@ texture coordinate of (0, 0) corresponds to the bottom-left of your
 texture, and a coordinate of (1, 1) corresponds to the top-right of your
 texture.
 
-![UV-Coordinates](../assets/images/finalproject/UV2.png)
+![UV-Coordinates1](../assets/images/finalproject/UV2.png)
+![UV-Coordinates2](../assets/images/finalproject/UV1.png)
