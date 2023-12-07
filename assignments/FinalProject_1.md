@@ -61,7 +61,7 @@ some personality to your buildings. Textures are placed onto your
 triangles by setting the location of each triangle vertex in the vertex.
 These should be given when you create a mesh component. The *BasicWall*
 class in *components.py* shows you how to set texture coordinates for
-each vertex. There’s also a class *WindowWall*, which uses a *SubMesh*
+each vertex. There’s also a class *BasicWindowWall*, which uses a *SubMesh*
 to set different textures for some triangles in the mesh. Look at the
 code in *WindowWall* to see how it works. We’ve provided some basic
 textures as part of the assignment. You are encouraged to create and use
