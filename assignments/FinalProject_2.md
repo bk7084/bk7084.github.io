@@ -9,61 +9,50 @@ In the second part of the final project, you are going to implement an
 optimization algorithm to make your city a city that people would love
 to live in.
 
-In total, your city consists of 64 plots of land (8x8) and should be
+In total, your city consists of 1024 plots of land (32 x 32) and should be
 populated with the following buildings:
-
-  - 6 Skyscrapers
-
-  - 10 High rises
-
-  - 18 Offices
-
-  - 26 Houses (Given)
-
-  - 4 Parks (Given)
+  - 5% Skyscrapers
+  - 8% Highrises
+  - 25% Offices
+  - 37% Houses
+  - 15% Parks
+  - the remaining plots can be whatever you want
+The houses and parks are already given, you don't have to generate them.
 
 ## Initializing the grid
 
-As of yet all the plots in your grid are only populated by a few
-buildings (two of each). Your first task will be to populate the grid so
-that the distribution above is respected, and you have a total of 64
-buildings placed in the city. In the file *city.py* you will find a
-function called *reset()*. In this function you have access to the grid
-that you must fill. The grid consists of 8x8 plots of land, each with a
-specific *PlotType*.  
-The following plot types exist:  
-
+Your first task will be to populate the grid so  that the distribution above
+is respected, and you have a total of 1024 buildings. In the file *city.py* 
+you will find a function called *reset_grid()*. In this function you have 
+access to the grid that you must fill. The grid consists of 32 x 32 plots of
+land, each containing a building. And each building has a type. The following  
+types are available:
   - `EMPTY`
-
   - `PARK`
-
   - `HOUSE`
-
   - `OFFICE`
-
   - `HIGHRISE`
-
   - `SKYSCRAPER`
 
 *City* has the following functions that you can use to place your
 buildings:
 
-  - **clear()**  
+  - **.clear()**  
     Fills the city with empty plots.
-
-  - **row, col**  
+  - **.rows, .cols**  
     Returns the number of plots in each direction of the grid (8 in this
     case).
-
-  - **get\_plot\_type(i, j)**  
-    Returns the plot type at position (i,j) on the grid.
-
-  - **set\_plot\_type(i, j, type)**  
-    Sets the plot type at given position (i,j) to be of **type**
-    instance.
-
-  - **grid.cell\_position(i, j)**  
-    Returns the position in 3D space of the plot center.
+  - **.get\_building(i, j)**  
+      Returns the building at position (i,j) in the grid. Where i is the
+      row and j is the column.
+  - **.set\_building(i, j, building)**  
+    Sets the building at position (i,j) to be of **building** instance.
+  - **.get\_building\_type(i, j)**  
+    Returns the building type at position (i,j) in the grid. Where i is the
+    row and j is the column.
+  - **.get\_plot\_center(i, j)**  
+    Returns the center (in 3D) of the plot at position (i,j) in the grid. Where
+    i is the row and j is the column.
 
 ## Optimization
 
@@ -108,17 +97,9 @@ following criteria:
 
 **You should come up with your own set of rules for your city.**
 Implement this in the *score()* function in *optimizer.py*. You have
-access to functions that compute the contribution of light from a given
-light position for either the ground of a plot or the building on the
-plot at cell (i, j). Look at *compute\_light\_of\_plot\_day(i, j)*,
-which sums the light contribution over 12 light positions. In *score()*,
-we use this function to compute the light score for the full grid.
-
-There’s quite a bit of computation happening in the background. If you
-find your program is too slow, try reducing the number of lights in
-*compute\_light\_of\_plot\_day(i, j)*, compute the light for only one
-plot or for a selected plot types (e.g., only houses and parks). **You can always comment out the
-light computation while your testing other rules in your city.**
+access to function that computes the contribution of light from all
+light positions for the whole city. Look at *compute\_sunlight\_scores()*,
+which return the light contribution over 11 light positions.
 
 # Presentation and Report
 
