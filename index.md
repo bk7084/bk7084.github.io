@@ -73,24 +73,26 @@ automatically, you should be able to see **compsim**, the environment
 we just created. Click to choose it. If you don’t see the name
 **compsim** run the command|:
 
+``` bash
 $ conda activate compsim
+```
 
-In fact, you will need to run this command everytime you open VSCode.
+You will need to run this command every time you open VSCode.
 
 ![image](assets/images/crashcourse/vscode-env.png)
 
-Now you can run the script by simply click the **Run Python File in
+Now you can run the script by simply clicking the **Run Python File in
 Terminal** play button in the top-right side of the editor.
 
 ![image](assets/images/crashcourse/vscode-run.png)
 
-The button opens terminal panel in which your Python interpreter is
+The button opens the terminal panel in which your Python interpreter is
 automatically activated, then runs `python hello.py`.
 
 ![image](assets/images/crashcourse/vscode-tml.png)
 
 As you can see, the **Hello World** is successfully printed on the
-screen in terminal.
+screen in the terminal.
 
 # Assignments Setup
 
@@ -107,12 +109,12 @@ Your terminal probably gives the following error:
 
 ![image](assets/images/crashcourse/error_msg.png)
 
-So, what exactly is a Python module? Simply put, a module is a python
+So, what exactly is a Python module? Simply put, a module is a Python
 file that contains definitions of functions, classes, and variables. In
 our case, it means that we need to install this module or package named
 **bk7084**.
 
-Open Anaconda-Prompt, then activate **compsim** using
+If you have not done so yet, activate **compsim** using
 
 ``` bash
 conda activate compsim
@@ -133,5 +135,5 @@ you should have a window with a brownish triangle drawn above like this:
 
 ![image](assets/images/crashcourse/intro-cap.png)
 
-Congratulations\! You now have a Python environment with necessary
-packages to run all the exercises. Now finish exercises inside **intro.py**.
+Congratulations\! You now have a Python environment with the necessary
+packages to run all the exercises. Now go ahead and try the exercises inside **intro.py**.
