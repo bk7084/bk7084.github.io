@@ -18,70 +18,8 @@ manually install it. You can have multiple installations of Python on the same m
 
 ### Install mini-anaconda
 
-#### Windows
-1. download the latest Miniconda installer for Windows 64-bit from
-<https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links>.
-2. Double-click the `.exe` file you just downloaded.
-3. Follow the instructions on the screen. If you are unsure about
-any setting, accept the defaults. You can always change them later. When
-the installation is complete, launch the Anaconda Prompt from the
-**Start** menu.
-4. To test your installation. Run the `conda list` command from
-your Anaconda prompt. A list of installed packages appears if it has
-been installed correctly.
-
-#### macOS
-1. Download the latest version of Miniconda that matches your computer's processor (Intel or Apple M1) from
-<https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links>.
-2. Double-click the downloaded installer and then follow the
-instructions on the screen.
-3. Test your installation. Open up _Terminal_ on your Mac (you can search for the app in Spotlight by pressing command + spacebar), type in `conda` and press Enter. You should see instructions for Conda in your terminal window.
-
-#### Linux
-
-  
-Enter your terminal, then follow the steps:
-
-1. Download the latest shell script
-```shell
-wget -c https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-```
-2. Run the installation script then follow the instructions on the
-screen
-``` shell
-sh ./Miniconda3-latest-Linux-x86_64.sh
-```
-3. To test your installation. In your terminal, run the command
-`conda list`. A list of installed packages appears if it has been
-installed correctly.
-
-### Create a new Python environment
-
-We can manage Python installations by setting up an _environment_. An _environment_ contains the Python interpreter and some other necessary Python packages. Once an environment is _activated_, anytime you run Python, it will be the version that is installed in that environment with the packages that were installed in that environment.
-
-Inside of your Anaconda Prompt (on Windows) or Terminal (macOS, Linux)  run the following command:
-
-``` shell
-conda create --name compsim python=3.9
-```
-
-This will create a environment named as **`compsim`**. Of course you
-can name it whatever you want. Later we will install some packages
-inside of this environment. Right after the creation, you can activate
-this environment use
-
-``` shell
-conda activate compsim
-```
-
-To test if everything works well, type in `python` and press enter in the command prompt/terminal. You should be able to see a python interpreter popped up:
-
-```shell
-(compsim) ~/00_introduction > python
-Python 3.9.15 (main, Nov 1 2022, 14:18:21) [GCC 12.2.0] on linux
-Type "help", "copyright", "credits", or "license" for more information.
->>>
-```
+Installation files for Windows, macOS and Linux can be found at:
+<https://docs.anaconda.com/miniconda/>
 
 ## Install Visual Studio Code and the Python Extension
 
@@ -120,20 +58,24 @@ Enter the following source code in **hello.py**:
 print("Hello World")
 ```
 
+# Conda environment
+
+Using the terminal, create a new environment with Python 3.9 installed.
+You don't have to type the `$`. It's used to show that you should run a line in the terminal.
+$ conda create -n compsim python=3.9
+
+
 Before we run it, we need to select a Python interpreter: within VSCode,
 open the **Command Palette** (*Ctrl+Shift+P*), and then type **Python:
 Select Interpreter** command to search, then select the command. The
 command presents a list of available interpreters that VS Code can find
-automatically, you should be able to see **bk7084-env**, the environment
+automatically, you should be able to see **compsim**, the environment
 we just created. Click to choose it. If you don’t see the name
-**bk7084-env**, close VS Code, open Ananconda-Prompt then run command
+**compsim** run the command|:
 
-``` bash
-conda activate compsim
-```
+$ conda activate compsim
 
-and reopen the VS Code, you should now be able to choose the environment
-that we created.
+In fact, you will need to run this command everytime you open VSCode.
 
 ![image](assets/images/crashcourse/vscode-env.png)
 
